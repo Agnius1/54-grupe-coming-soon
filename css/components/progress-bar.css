@@ -2,11 +2,13 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  background-color: #ffffff;
+  animation-fill-mode: both;
+  border-radius: 2rem;
 }
 .progress-bar .top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .progress-bar .bottom {
   height: 0.5rem;
@@ -14,7 +16,25 @@
   background-color: #ddd;
 }
 .progress-bar .bar {
+
   height: 100%;
   width: 90%;
+
+
+}
+.progress-bar .bar::before {
+  border-radius: 0.2rem;
   background-color: #03a9f5;
+  animation: progressBar 2s ease-in-out;
+  content: "";
+  display:block;
+  width: 100%;
+  height: inherit;
+}
+@keyframes progressBar {
+0% { width: 0%; }
+100% { width: 100%; }
+}
+.bottom {
+  border-radius: 0.2rem;
 }

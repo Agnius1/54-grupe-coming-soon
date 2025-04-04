@@ -94,7 +94,17 @@
                             <textarea name="message" id="message" placeholder="Your message here"></textarea>
 
                         </div>
-                        <button type="sendbtn">Send message</button>
+                    <button class="sendbtn" type="button" onclick="playSound();">Send message</button>
+
+                    <script type="text/javascript">
+                          const audio = new Audio("./sound/mMurlocAggroOld.ogg");
+                          audio.volume = 0.1;
+                        
+                          function playSound() {
+                            audio.currentTime = 0;
+                            audio.play();
+                          }
+                        </script>
                 </div>
                         <div>
 
@@ -104,6 +114,7 @@
             </div>
         </section>
     </main>
+
 
     <footer class="container footer bg-blue">
         <div class="row">

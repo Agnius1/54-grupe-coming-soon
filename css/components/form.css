@@ -16,3 +16,7 @@ button {
     border-color: #ec1d61;
     font-weight: bold;
 }
+textarea {
+    min-width:fit-content;
+    min-height: fit-content;
+}
